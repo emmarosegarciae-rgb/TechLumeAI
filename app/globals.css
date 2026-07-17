@@ -1,0 +1,294 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: 255 255 255;
+  --foreground: 15 23 42;
+  --muted: 241 245 249;
+  --muted-foreground: 71 85 105;
+  --card: 255 255 255;
+  --card-foreground: 15 23 42;
+  --border: 226 232 240;
+  --primary: 15 23 42;
+  --primary-foreground: 255 255 255;
+  --secondary: 37 99 235;
+  --accent: 2 100 180;
+  --success: 34 197 94;
+  --warning: 245 158 11;
+  --error: 239 68 68;
+  --radius: 8px;
+}
+
+.dark {
+  --background: 2 6 23;
+  --foreground: 248 250 252;
+  --muted: 15 23 42;
+  --muted-foreground: 148 163 184;
+  --card: 15 23 42;
+  --card-foreground: 248 250 252;
+  --border: 30 41 59;
+  --primary: 248 250 252;
+  --primary-foreground: 2 6 23;
+  --secondary: 56 189 248;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgb(56 189 248 / 0.08), transparent 36rem),
+    radial-gradient(circle at top right, rgb(37 99 235 / 0.05), transparent 42rem),
+    rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-feature-settings:
+    "cv02",
+    "cv03",
+    "cv04",
+    "cv11";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgb(37 99 235 / 0.18);
+  color: rgb(var(--foreground));
+}
+
+.site-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgb(248 250 252 / 0.92), transparent 42rem),
+    rgb(var(--background));
+}
+
+.dark .site-shell {
+  background:
+    linear-gradient(180deg, rgb(15 23 42 / 0.64), transparent 42rem),
+    rgb(var(--background));
+}
+
+.container-page {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.container-wide {
+  width: min(1360px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow:
+    0 0 0 2px rgb(var(--background)),
+    0 0 0 5px rgb(37 99 235 / 0.72);
+}
+
+/* Glassmorphic and Editorial Surface Tokens */
+.glass-panel {
+  border: 1px solid rgb(var(--border) / 0.76);
+  background: rgb(var(--card) / 0.82);
+  box-shadow: 0 24px 70px -38px rgb(15 23 42 / 0.45);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.dark .glass-panel {
+  border: 1px solid rgb(255 255 255 / 0.09);
+  background: rgb(15 23 42 / 0.78);
+}
+
+.glass-card {
+  border: 1px solid rgb(var(--border) / 0.8);
+  background: rgb(255 255 255 / 0.94);
+  box-shadow: 0 16px 50px -28px rgb(15 23 42 / 0.38);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glass-card {
+  border: 1px solid rgb(255 255 255 / 0.08);
+  background: rgb(15 23 42 / 0.92);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px -24px rgb(37 99 235 / 0.32);
+  border-color: rgb(59 130 246 / 0.5);
+}
+
+.dark .glass-card:hover {
+  border-color: rgb(56 189 248 / 0.45);
+  box-shadow: 0 24px 60px -24px rgb(56 189 248 / 0.22);
+}
+
+.glass-pill {
+  border: 1px solid rgb(var(--border) / 0.8);
+  background: rgb(var(--card) / 0.7);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.dark .glass-pill {
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(15 23 42 / 0.65);
+}
+
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: linear-gradient(to right, rgb(var(--border) / 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--border) / 0.4) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image: linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+}
+
+/* Editorial Typography Utilities */
+.editorial-title-1 {
+  font-family: var(--font-space), var(--font-inter), sans-serif;
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.editorial-title-2 {
+  font-family: var(--font-space), var(--font-inter), sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+}
+
+.editorial-eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+/* Live Indicator Dot */
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.92); }
+}
+
+.badge-live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: rgb(34 197 94);
+  animation: pulse-live 2s infinite ease-in-out;
+}
+
+/* Article Prose Styles */
+.article-prose {
+  color: rgb(var(--foreground));
+  font-size: 1.0625rem;
+  line-height: 1.82;
+}
+
+.article-prose h2 {
+  margin-top: 2.7rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-space), var(--font-inter), sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.article-prose p {
+  margin-block: 1.2rem;
+}
+
+.article-prose blockquote {
+  margin: 2rem 0;
+  border-left: 4px solid #2563eb;
+  padding: 1rem 0 1rem 1.35rem;
+  color: rgb(var(--muted-foreground));
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+
+.article-prose code {
+  border-radius: 6px;
+  background: rgb(15 23 42 / 0.08);
+  padding: 0.16rem 0.34rem;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.88em;
+}
+
+.dark .article-prose code {
+  background: rgb(248 250 252 / 0.08);
+}
+
+.article-prose pre {
+  overflow: auto;
+  border-radius: var(--radius);
+  background: #020617;
+  color: #e2e8f0;
+  padding: 1rem;
+  line-height: 1.65;
+}
+
+.article-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: var(--radius);
+  font-size: 0.94rem;
+}
+
+.article-prose th,
+.article-prose td {
+  border: 1px solid rgb(var(--border));
+  padding: 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-prose th {
+  background: rgb(var(--muted));
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
