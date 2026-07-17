@@ -1,0 +1,46 @@
+{
+  "name": "techlumeai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Premium AI and technology publication built with Next.js App Router.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "audit:lighthouse": "npx unlighthouse --site https://techlumeai.com",
+    "audit:schema": "npx schema-dts-gen --check",
+    "audit:a11y": "npx pa11y-ci --sitemap https://techlumeai.com/sitemap.xml",
+    "audit:seo": "npx tsx scripts/audit-seo.ts",
+    "test:seo": "npx tsx scripts/audit-seo.ts"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "12.42.2",
+    "lucide-react": "1.23.0",
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
+    "@tailwindcss/postcss": "4.3.2",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.3",
+    "eslint-config-next": "16.2.10",
+    "prettier": "^3.7.3",
+    "tailwindcss": "4.3.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

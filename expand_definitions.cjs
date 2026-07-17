@@ -1,0 +1,20 @@
+const fs = require('fs');
+let content = fs.readFileSync('c:/Users/DELL/Documents/Codex/2026-07-08/fo/outputs/techlumeai/lib/data/articles.ts', 'utf8');
+
+const definitions = {
+  "enterprise-ai-agents-production": "An autonomous software program driven by a Large Language Model (LLM) capable of planning, invoking tools, and executing complex workflows without constant human intervention. In enterprise contexts, AI agents must operate under strict Role-Based Access Controls, maintain persistent state across sessions, and securely interface with corporate APIs using protocols like the Model Context Protocol (MCP) to ensure deterministic outcomes.",
+  "open-models-infrastructure-shift": "A foundation model (like Llama 3 or Mistral) where the pre-trained weights are publicly available, allowing enterprises to fine-tune, host, and deploy the model entirely within their own infrastructure. This paradigm shift breaks vendor lock-in, enabling organizations to optimize inference costs through advanced quantization techniques and ensure complete data privacy by running workloads entirely on-premises or within isolated private clouds.",
+  "cybersecurity-ai-defense-brief": "An adversarial security exploit where malicious instructions are embedded within user input to override an AI model's safety guardrails or hijack its tool-calling capabilities. Defending against prompt injection requires a defense-in-depth architecture, utilizing input sanitization, stateless execution layers for external tools, and secondary LLM monitors that evaluate the primary model's outputs for structural integrity before executing commands.",
+  "cloud-cost-architecture-guide": "The cloud economics operational framework specifically tailored for generative AI, focused on auditing token usage, tracking vector database storage costs, and optimizing LLM inference routing. A mature AI FinOps strategy implements dynamic semantic routing to send simple queries to highly quantized open-weight models while reserving expensive frontier API calls (like GPT-4o) only for tasks requiring advanced reasoning.",
+  "developer-tools-2026": "The systematic architecture, deterministic chaining, and quantitative evaluation of instructions used to steer the behavior of Large Language Models and AI Agents. Modern prompt engineering transcends simple text optimization, operating as a rigorous software discipline that requires version control, parameterized templates, and automated regression testing using LLM-as-a-Judge frameworks to ensure consistent model behavior across production deployments.",
+  "startup-ai-monetization": "A large-scale AI model trained on a vast quantity of unlabeled data, designed to be adapted (e.g., fine-tuned) to a wide range of downstream tasks. Foundation models serve as the cognitive engine for AI startups, which must build defensive moats by combining these raw models with proprietary datasets, bespoke Retrieval-Augmented Generation (RAG) pipelines, and highly specialized vertical knowledge to capture enduring enterprise value.",
+  "robotics-foundation-models": "A multimodal foundation model capable of processing visual sensor data and natural language instructions to output direct physical control signals (actions) for a robot. Unlike traditional text-only LLMs, VLA architectures fundamentally transform robotics by providing zero-shot generalization capabilities, allowing hardware to navigate novel environments and manipulate unfamiliar objects without requiring expensive, task-specific hardcoding or prolonged reinforcement learning cycles."
+};
+
+for (const [slug, defText] of Object.entries(definitions)) {
+  const regex = new RegExp(`(slug:\\s*["']${slug}["'][\\s\\S]*?type:\\s*["']definition["'],[^]*?definition:\\s*["'])(.*?)(["'])`);
+  content = content.replace(regex, `$1${defText}$3`);
+}
+
+fs.writeFileSync('c:/Users/DELL/Documents/Codex/2026-07-08/fo/outputs/techlumeai/lib/data/articles.ts', content);
+console.log("Expanded definition blocks to >= 30 words.");
