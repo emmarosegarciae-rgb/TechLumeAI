@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="blue-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg-grad)"/>
+  
+  <!-- Subtle Grid -->
+  <g stroke="#334155" stroke-width="1" opacity="0.25">
+    <path d="M 0 80 L 800 80 M 0 160 L 800 160 M 0 240 L 800 240 M 0 320 L 800 320 M 0 400 L 800 400" />
+    <path d="M 100 0 L 100 480 M 200 0 L 200 480 M 300 0 L 300 480 M 400 0 L 400 480 M 500 0 L 500 480 M 600 0 L 600 480 M 700 0 L 700 480" />
+  </g>
+
+  <!-- Background Decorative Circles -->
+  <circle cx="680" cy="90" r="140" fill="#3B82F6" opacity="0.08" filter="blur(40px)"/>
+  <circle cx="120" cy="380" r="160" fill="#06B6D4" opacity="0.06" filter="blur(40px)"/>
+
+  <!-- Workflow Connecting Paths -->
+  <g fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="6 6" opacity="0.7">
+    <path d="M 230 180 C 310 180, 310 130, 390 130" />
+    <path d="M 230 180 C 310 180, 310 230, 390 230" />
+    <path d="M 230 180 C 310 180, 310 330, 390 330" />
+    <path d="M 570 130 C 630 130, 630 220, 680 220" />
+    <path d="M 570 230 C 630 230, 630 220, 680 220" />
+    <path d="M 570 330 C 630 330, 630 220, 680 220" />
+  </g>
+
+  <!-- Node 1: Input Orchestrator -->
+  <g transform="translate(50, 140)" filter="url(#shadow)">
+    <rect width="180" height="84" rx="10" fill="url(#card-grad)" stroke="#3B82F6" stroke-width="1.5"/>
+    <circle cx="22" cy="24" r="5" fill="#3B82F6"/>
+    <text x="36" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Agent Orchestrator</text>
+    <text x="36" y="46" fill="#94A3B8" font-family="monospace" font-size="10">v2.4 · Multi-Turn</text>
+    <rect x="22" y="58" width="136" height="12" rx="3" fill="#334155"/>
+    <rect x="22" y="58" width="96" height="12" rx="3" fill="url(#blue-glow)"/>
+  </g>
+
+  <!-- Node 2A: Reasoning Loop -->
+  <g transform="translate(390, 88)" filter="url(#shadow)">
+    <rect width="180" height="84" rx="10" fill="url(#card-grad)" stroke="#60A5FA" stroke-width="1.5"/>
+    <circle cx="22" cy="24" r="5" fill="#10B981"/>
+    <text x="36" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Reasoning Planner</text>
+    <text x="36" y="46" fill="#94A3B8" font-family="monospace" font-size="10">Tool Selection · 14ms</text>
+    <rect x="22" y="58" width="60" height="14" rx="4" fill="#10B981" fill-opacity="0.15"/>
+    <text x="30" y="68" fill="#10B981" font-family="monospace" font-size="9" font-weight="700">CHECK PASSED</text>
+  </g>
+
+  <!-- Node 2B: Database Retrieval -->
+  <g transform="translate(390, 188)" filter="url(#shadow)">
+    <rect width="180" height="84" rx="10" fill="url(#card-grad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <circle cx="22" cy="24" r="5" fill="#38BDF8"/>
+    <text x="36" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Vector Knowledge</text>
+    <text x="36" y="46" fill="#94A3B8" font-family="monospace" font-size="10">pgvector · 1.2M chunks</text>
+    <text x="22" y="66" fill="#38BDF8" font-family="monospace" font-size="11">Top-K Similarity: 0.94</text>
+  </g>
+
+  <!-- Node 2C: Tool Execution -->
+  <g transform="translate(390, 288)" filter="url(#shadow)">
+    <rect width="180" height="84" rx="10" fill="url(#card-grad)" stroke="#F59E0B" stroke-width="1.5"/>
+    <circle cx="22" cy="24" r="5" fill="#F59E0B"/>
+    <text x="36" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">API Execution Node</text>
+    <text x="36" y="46" fill="#94A3B8" font-family="monospace" font-size="10">Sandboxed Terminal</text>
+    <rect x="22" y="58" width="70" height="14" rx="4" fill="#F59E0B" fill-opacity="0.15"/>
+    <text x="30" y="68" fill="#F59E0B" font-family="monospace" font-size="9" font-weight="700">OAUTH VERIFIED</text>
+  </g>
+
+  <!-- Node 3: Output Synthesis -->
+  <g transform="translate(640, 178)" filter="url(#shadow)">
+    <rect width="120" height="84" rx="10" fill="url(#card-grad)" stroke="#10B981" stroke-width="2"/>
+    <circle cx="60" cy="28" r="10" fill="#10B981" fill-opacity="0.2"/>
+    <circle cx="60" cy="28" r="5" fill="#10B981"/>
+    <text x="60" y="52" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Production</text>
+    <text x="60" y="68" text-anchor="middle" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">SUCCESS · 182ms</text>
+  </g>
+
+  <!-- Top Title Bar inside Illustration -->
+  <rect x="50" y="40" width="310" height="34" rx="6" fill="#1E293B" stroke="#334155"/>
+  <circle cx="66" cy="57" r="4" fill="#EF4444"/>
+  <circle cx="78" cy="57" r="4" fill="#F59E0B"/>
+  <circle cx="90" cy="57" r="4" fill="#10B981"/>
+  <text x="110" y="61" fill="#E2E8F0" font-family="monospace" font-size="11" font-weight="600">agent-topology.yaml --production --zero-trust</text>
+</svg>

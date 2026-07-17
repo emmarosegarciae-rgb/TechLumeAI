@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rev-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#134E4A"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#rev-grad)"/>
+
+  <!-- Server Rack / Hardware Benchmark -->
+  <g transform="translate(140, 50)">
+    <rect width="320" height="240" rx="12" fill="#042F2E" stroke="#14B8A6" stroke-width="2"/>
+    <rect x="20" y="24" width="280" height="40" rx="6" fill="#115E59" stroke="#2DD4BF"/>
+    <circle cx="44" cy="44" r="6" fill="#34D399"/>
+    <text x="64" y="48" fill="#CCFBF1" font-family="monospace" font-size="12 font-bold">NODE_01: H200 HGX Blade — 700W</text>
+
+    <rect x="20" y="78" width="280" height="40" rx="6" fill="#115E59" stroke="#2DD4BF"/>
+    <circle cx="44" cy="98" r="6" fill="#34D399"/>
+    <text x="64" y="102" fill="#CCFBF1" font-family="monospace" font-size="12 font-bold">NODE_02: Blackwell NVL72 — 1.2kW</text>
+
+    <rect x="20" y="132" width="280" height="40" rx="6" fill="#115E59" stroke="#2DD4BF"/>
+    <circle cx="44" cy="152" r="6" fill="#34D399"/>
+    <text x="64" y="156" fill="#CCFBF1" font-family="monospace" font-size="12 font-bold">NODE_03: Gaudi 3 AI Matrix — Optimal</text>
+
+    <rect x="20" y="186" width="280" height="34" rx="6" fill="#0D9488"/>
+    <text x="160" y="208" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="12 font-bold">THERMAL_FLOOR_BENCHMARK_VERIFIED</text>
+  </g>
+</svg>

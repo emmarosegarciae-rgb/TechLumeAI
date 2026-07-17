@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%" role="img" aria-labelledby="title desc">
+  <title id="title">NVIDIA AI Enterprise Infrastructure Sponsor Showcase</title>
+  <desc id="desc">Publication-grade rectangular sponsor graphic illustrating model inference pipelines, cloud regions, and SLA metrics.</desc>
+  <defs>
+    <linearGradient id="rec-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow-rec" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#rec-bg)"/>
+
+  <!-- Radar & Isometric Grid Circles -->
+  <circle cx="300" cy="300" r="220" stroke="#334155" stroke-width="1" fill="none" opacity="0.3"/>
+  <circle cx="300" cy="300" r="140" stroke="#10B981" stroke-width="1" stroke-dasharray="6 6" fill="none" opacity="0.4"/>
+  <circle cx="300" cy="300" r="60" fill="#10B981" opacity="0.08"/>
+
+  <!-- Top Center: Tensor Core & GPU Inference Hub -->
+  <g transform="translate(180, 140)" filter="url(#shadow-rec)">
+    <rect width="240" height="150" rx="16" fill="url(#card-grad)" stroke="#10B981" stroke-width="2.5"/>
+    <!-- GPU Chip Icon Graphic -->
+    <rect x="24" y="24" width="48" height="48" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="2"/>
+    <path d="M 36 48 L 60 48 M 48 36 L 48 60" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+    <!-- Chip Header Text -->
+    <text x="86" y="42" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800">NVIDIA AI HUB</text>
+    <text x="86" y="60" fill="#10B981" font-family="monospace" font-size="11" font-weight="700">Enterprise Cloud v4</text>
+    <!-- Latency & SLA Bars -->
+    <rect x="24" y="90" width="192" height="14" rx="4" fill="#334155"/>
+    <rect x="24" y="90" width="168" height="14" rx="4" fill="#10B981"/>
+    <text x="24" y="122" fill="#94A3B8" font-family="monospace" font-size="10">Throughput: 14.2K tok/s</text>
+  </g>
+
+  <!-- Connected Hybrid Cloud Region Nodes Below -->
+  <g transform="translate(70, 350)" filter="url(#shadow-rec)">
+    <rect width="210" height="110" rx="12" fill="url(#card-grad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <circle cx="22" cy="26" r="6" fill="#38BDF8"/>
+    <text x="38" y="30" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">US-East Region</text>
+    <rect x="22" y="48" width="166" height="20" rx="4" fill="#1E293B"/>
+    <text x="30" y="62" fill="#38BDF8" font-family="monospace" font-size="10">Predictable SLA: 99.99%</text>
+    <text x="22" y="88" fill="#94A3B8" font-family="monospace" font-size="10">Multi-Node Tensor Cluster</text>
+  </g>
+
+  <g transform="translate(320, 350)" filter="url(#shadow-rec)">
+    <rect width="210" height="110" rx="12" fill="url(#card-grad)" stroke="#06B6D4" stroke-width="1.5"/>
+    <circle cx="22" cy="26" r="6" fill="#06B6D4"/>
+    <text x="38" y="30" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">EU-Central Node</text>
+    <rect x="22" y="48" width="166" height="20" rx="4" fill="#1E293B"/>
+    <text x="30" y="62" fill="#06B6D4" font-family="monospace" font-size="10">Sovereign Data Shield</text>
+    <text x="22" y="88" fill="#94A3B8" font-family="monospace" font-size="10">Local Inference Enclave</text>
+  </g>
+
+  <!-- Connecting Lines between Hub and Regions -->
+  <g fill="none" stroke="#10B981" stroke-width="2.5" stroke-dasharray="5 5">
+    <path d="M 230 290 L 175 350" />
+    <path d="M 370 290 L 425 350" />
+  </g>
+  <circle cx="230" cy="290" r="5" fill="#10B981"/>
+  <circle cx="370" cy="290" r="5" fill="#10B981"/>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-sec" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05131E"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="shield-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="shadow-sec">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg-sec)"/>
+
+  <!-- Radar circle grid -->
+  <circle cx="400" cy="240" r="180" fill="none" stroke="#1E293B" stroke-width="1" stroke-dasharray="8 8"/>
+  <circle cx="400" cy="240" r="120" fill="none" stroke="#1E293B" stroke-width="1"/>
+  <circle cx="400" cy="240" r="60" fill="none" stroke="#10B981" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Center Shield Node -->
+  <g transform="translate(340, 180)" filter="url(#shadow-sec)">
+    <rect width="120" height="120" rx="60" fill="#064E3B" stroke="#10B981" stroke-width="2"/>
+    <!-- Shield shape inside -->
+    <path d="M 60 30 L 84 42 V 68 C 84 84, 60 96, 60 96 C 60 96, 36 84, 36 68 V 42 L 60 30 Z" fill="url(#shield-grad)" stroke="#34D399" stroke-width="2"/>
+    <circle cx="60" cy="60" r="8" fill="#34D399"/>
+  </g>
+
+  <!-- Left Threat Stream Card -->
+  <g transform="translate(40, 110)" filter="url(#shadow-sec)">
+    <rect width="220" height="260" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <text x="20" y="34" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Telemetry Ingestion</text>
+    <text x="20" y="52" fill="#94A3B8" font-family="monospace" font-size="10">84,000 events/sec</text>
+
+    <!-- Event 1 -->
+    <rect x="16" y="72" width="188" height="48" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <circle cx="32" cy="96" r="4" fill="#F59E0B"/>
+    <text x="46" y="92" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="600">IAM Role Elevation</text>
+    <text x="46" y="108" fill="#94A3B8" font-family="monospace" font-size="9">Agent Token #9482 · Suspicious</text>
+
+    <!-- Event 2 -->
+    <rect x="16" y="130" width="188" height="48" rx="6" fill="#1E293B" stroke="#EF4444" stroke-width="1"/>
+    <circle cx="32" cy="154" r="4" fill="#EF4444"/>
+    <text x="46" y="150" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="600">Prompt Injection Flag</text>
+    <text x="46" y="166" fill="#94A3B8" font-family="monospace" font-size="9">VPC Query Sandbox · Blocked</text>
+
+    <!-- Event 3 -->
+    <rect x="16" y="188" width="188" height="48" rx="6" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <circle cx="32" cy="212" r="4" fill="#10B981"/>
+    <text x="46" y="208" fill="#F8FAFC" font-family="monospace" font-size="11" font-weight="600">OAuth Handshake</text>
+    <text x="46" y="224" fill="#94A3B8" font-family="monospace" font-size="9">Zero-Trust Cert · Verified</text>
+  </g>
+
+  <!-- Right Defense Action Card -->
+  <g transform="translate(540, 110)" filter="url(#shadow-sec)">
+    <rect width="220" height="260" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <text x="20" y="34" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Autonomous Defense</text>
+    <text x="20" y="52" fill="#94A3B8" font-family="monospace" font-size="10">Active Response Protocol</text>
+
+    <rect x="16" y="72" width="188" height="60" rx="6" fill="#064E3B" stroke="#10B981" stroke-width="1.5"/>
+    <text x="28" y="94" fill="#34D399" font-family="monospace" font-size="11" font-weight="700">POLICY ENFORCED</text>
+    <text x="28" y="114" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="11">Revoked session key for agent #9482 across all cloud regions.</text>
+
+    <rect x="16" y="142" width="188" height="46" rx="6" fill="#1E293B"/>
+    <text x="28" y="162" fill="#94A3B8" font-family="monospace" font-size="10">MTTR (Mean Time to Respond)</text>
+    <text x="28" y="178" fill="#38BDF8" font-family="monospace" font-size="13" font-weight="700">18.4 Milliseconds</text>
+
+    <rect x="16" y="198" width="188" height="40" rx="6" fill="#1E293B"/>
+    <text x="28" y="223" fill="#10B981" font-family="monospace" font-size="11" font-weight="700">✓ SOC2 Type II Audited</text>
+  </g>
+
+  <!-- Connecting Arrows -->
+  <path d="M 260 240 L 340 240" stroke="#34D399" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+  <path d="M 460 240 L 540 240" stroke="#34D399" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+</svg>

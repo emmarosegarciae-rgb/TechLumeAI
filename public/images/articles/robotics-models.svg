@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-robotics" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="shadow-rob">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg-robotics)"/>
+
+  <!-- Isometric Spatial Grid Canvas -->
+  <g stroke="#334155" stroke-width="1" opacity="0.35">
+    <path d="M 0 160 L 800 160 M 0 240 L 800 240 M 0 320 L 800 320 M 0 400 L 800 400" />
+    <path d="M 160 0 L 160 480 M 320 0 L 320 480 M 480 0 L 480 480 M 640 0 L 640 480" />
+    <!-- Diagonal spatial rays -->
+    <path d="M 100 480 L 400 160 L 700 480" stroke="#06B6D4" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Left: Perception HUD Viewport -->
+  <g transform="translate(40, 50)" filter="url(#shadow-rob)">
+    <rect width="440" height="380" rx="14" fill="#0B0F19" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="28" y="38" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">Multimodal Perception Engine & HUD</text>
+    <text x="28" y="58" fill="#06B6D4" font-family="monospace" font-size="11">Real-Time Spatial Bounding Boxes · Depth & Action Vectors</text>
+
+    <!-- Simulated Camera Feed Area -->
+    <rect x="28" y="80" width="384" height="220" rx="8" fill="#020617" stroke="#1E293B"/>
+
+    <!-- Bounding Box 1: Robotic Arm Joint -->
+    <rect x="70" y="110" width="120" height="130" fill="none" stroke="#06B6D4" stroke-width="2" stroke-dasharray="4 4"/>
+    <rect x="70" y="94" width="100" height="16" fill="#06B6D4"/>
+    <text x="76" y="106" fill="#020617" font-family="monospace" font-size="10 font-bold">ARM_JOINT_03 (99.4%)</text>
+    <circle cx="130" cy="175" r="5" fill="#06B6D4"/>
+
+    <!-- Bounding Box 2: Target Object / Component -->
+    <rect x="240" y="150" width="130" height="110" fill="none" stroke="#10B981" stroke-width="2"/>
+    <rect x="240" y="134" width="115" height="16" fill="#10B981"/>
+    <text x="246" y="146" fill="#020617" font-family="monospace" font-size="10 font-bold">TARGET_ASSEMBLY (0.98)</text>
+    <circle cx="305" cy="205" r="5" fill="#10B981"/>
+
+    <!-- Action Vector Arrow connecting Joint to Target -->
+    <path d="M 135 175 C 180 160, 240 180, 298 202" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
+    <polygon points="305,205 292,196 295,208" fill="#F59E0B"/>
+    <rect x="180" y="160" width="76" height="20" rx="4" fill="#F59E0B" fill-opacity="0.2"/>
+    <text x="218" y="174" text-anchor="middle" fill="#FBBF24" font-family="monospace" font-size="10 font-bold">Vector +4.2°</text>
+
+    <!-- Telemetry Bar -->
+    <rect x="28" y="316" width="384" height="42" rx="6" fill="#0F172A"/>
+    <text x="44" y="341" fill="#94A3B8" font-family="monospace" font-size="11">Inference Latency: <tspan fill="#38BDF8 font-bold">8.4ms</tspan></text>
+    <text x="230" y="341" fill="#94A3B8" font-family="monospace" font-size="11">Sensor Fusion: <tspan fill="#10B981 font-bold">LiDAR + Vision</tspan></text>
+  </g>
+
+  <!-- Right: Foundation Model Control Stack -->
+  <g transform="translate(510, 50)" filter="url(#shadow-rob)">
+    <rect width="250" height="380" rx="14" fill="#0B0F19" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="24" y="38" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">Action Foundation Architecture</text>
+    <text x="24" y="58" fill="#94A3B8" font-family="monospace" font-size="11">VLA (Vision-Language-Action)</text>
+
+    <!-- Layer 1: High-Level Reasoning -->
+    <rect x="20" y="84" width="210" height="66" rx="8" fill="#0F172A" stroke="#8B5CF6"/>
+    <text x="36" y="108" fill="#C084FC" font-family="monospace" font-size="11 font-bold">1. Semantic Command</text>
+    <text x="36" y="128" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">"Pick component from tray B"</text>
+
+    <!-- Layer 2: Spatial Transformers -->
+    <rect x="20" y="166" width="210" height="66" rx="8" fill="#0F172A" stroke="#06B6D4"/>
+    <text x="36" y="190" fill="#38BDF8" font-family="monospace" font-size="11 font-bold">2. 3D Spatial Tokenizer</text>
+    <text x="36" y="210" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">Voxel occupancy & point cloud</text>
+
+    <!-- Layer 3: Action Policy Outputs -->
+    <rect x="20" y="248" width="210" height="66" rx="8" fill="#0F172A" stroke="#10B981"/>
+    <text x="36" y="272" fill="#34D399" font-family="monospace" font-size="11 font-bold">3. Motor Torques & Actuation</text>
+    <text x="36" y="292" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12">1,000Hz low-level joint control</text>
+
+    <rect x="20" y="330" width="210" height="34" rx="6" fill="#10B981" fill-opacity="0.15" stroke="#10B981"/>
+    <text x="125" y="351" text-anchor="middle" fill="#34D399" font-family="monospace" font-size="11 font-bold">✓ Zero Collision Guarantee</text>
+  </g>
+</svg>

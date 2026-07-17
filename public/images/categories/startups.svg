@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sup-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#500724"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#sup-grad)"/>
+
+  <!-- Rocket trajectory / Compounding curve -->
+  <path d="M 80 260 Q 240 230, 360 140 T 520 60" fill="none" stroke="#EC4899" stroke-width="4"/>
+  <circle cx="520" cy="60" r="10" fill="#F472B6"/>
+
+  <rect x="120" y="100" width="180" height="120" rx="10" fill="#1E293B" stroke="#EC4899" stroke-width="2"/>
+  <text x="140" y="130" fill="#FBCFE8" font-family="monospace" font-size="12">Velocity Index</text>
+  <text x="140" y="165" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="28 font-black">14.8x</text>
+  <text x="140" y="195" fill="#34D399" font-family="monospace" font-size="11 font-bold">+280% ARR YoY</text>
+
+  <rect x="330" y="180" width="180" height="100" rx="10" fill="#1E293B" stroke="#F472B6" stroke-width="1.5"/>
+  <text x="350" y="210" fill="#FBCFE8" font-family="monospace" font-size="11">Series B Benchmark</text>
+  <text x="350" y="245" fill="#F472B6" font-family="system-ui, -apple-system, sans-serif" font-size="22 font-bold">$18.4M ARR</text>
+</svg>

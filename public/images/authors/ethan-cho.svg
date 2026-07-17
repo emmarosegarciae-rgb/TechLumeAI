@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Ethan Cho - Senior Engineering Analyst</title>
+  <desc id="desc">Flat geometric editorial portrait of Ethan Cho with MLOps routing and architecture motifs.</desc>
+  <defs>
+    <linearGradient id="ethan-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="ethan-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Container -->
+  <rect width="256" height="256" rx="64" fill="url(#ethan-bg)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Background Technical Signal Motifs (MLOps & Inference Routing) -->
+  <g opacity="0.25" stroke="#06B6D4" stroke-width="1.5" fill="none">
+    <!-- Code Bracket and Graph Nodes -->
+    <path d="M 50 64 L 38 76 L 50 88" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 68 64 L 80 76 L 68 88" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="196" cy="68" r="5" fill="#06B6D4"/>
+    <circle cx="216" cy="48" r="4" stroke="#3B82F6"/>
+    <circle cx="216" cy="88" r="4" stroke="#3B82F6"/>
+    <path d="M 196 68 L 216 48 M 196 68 L 216 88" stroke-dasharray="2 2"/>
+    <rect x="36" y="170" width="44" height="24" rx="4" stroke="#06B6D4" stroke-dasharray="3 3"/>
+    <text x="44" y="186" fill="#06B6D4" font-family="monospace" font-size="10" font-weight="700">MLOps</text>
+  </g>
+
+  <!-- Geometric Portrait -->
+  <g filter="url(#shadow-sm)">
+    <!-- Shoulders / Jacket -->
+    <path d="M 52 236 C 66 186, 190 186, 204 236 Z" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+    <path d="M 112 186 L 128 236 L 144 186 Z" fill="url(#ethan-accent)"/>
+    <!-- Neck -->
+    <rect x="114" y="140" width="28" height="24" rx="6" fill="#E2E8F0"/>
+    <!-- Head Silhouette -->
+    <rect x="94" y="76" width="68" height="80" rx="34" fill="#F8FAFC"/>
+    <!-- Modern Textured Short Hair Silhouette -->
+    <path d="M 94 94 C 94 62, 162 62, 162 94 C 162 100, 164 106, 166 110 L 160 110 C 160 82, 152 70, 128 70 C 104 70, 96 82, 96 110 L 90 110 C 92 106, 94 100, 94 94 Z" fill="#0F172A"/>
+    <!-- Sleek Tech Glasses / Browline -->
+    <rect x="100" y="104" width="24" height="14" rx="3" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <rect x="132" y="104" width="24" height="14" rx="3" fill="none" stroke="#0F172A" stroke-width="2"/>
+    <path d="M 124 110 L 132 110" stroke="#0F172A" stroke-width="2"/>
+  </g>
+
+  <!-- Engineering Lead Badge -->
+  <g transform="translate(186, 204)" filter="url(#shadow-sm)">
+    <circle cx="16" cy="16" r="16" fill="#06B6D4" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M 11 16 L 15 20 L 21 13" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

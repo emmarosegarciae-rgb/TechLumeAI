@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Maya Hart - Editor in Chief</title>
+  <desc id="desc">Flat geometric editorial portrait of Maya Hart with AI strategy and executive briefing motifs.</desc>
+  <defs>
+    <linearGradient id="maya-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="maya-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <filter id="shadow-sm" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Container -->
+  <rect width="256" height="256" rx="64" fill="url(#maya-bg)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Background Technical Signal Motifs (Editorial & AI Strategy) -->
+  <g opacity="0.25" stroke="#38BDF8" stroke-width="1.5" fill="none">
+    <circle cx="200" cy="56" r="32" stroke-dasharray="4 4"/>
+    <circle cx="200" cy="56" r="4"/>
+    <path d="M 40 70 L 80 70 M 40 86 L 66 86 M 40 102 L 74 102" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 184 180 C 200 180, 210 160, 226 160" stroke-dasharray="3 3"/>
+    <circle cx="226" cy="160" r="3" fill="#38BDF8"/>
+  </g>
+
+  <!-- Geometric Portrait -->
+  <g filter="url(#shadow-sm)">
+    <!-- Shoulders / Blazer -->
+    <path d="M 56 236 C 68 186, 188 186, 200 236 Z" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+    <path d="M 96 196 L 128 236 L 160 196 Z" fill="url(#maya-accent)" opacity="0.85"/>
+    <!-- Neck -->
+    <rect x="114" y="140" width="28" height="24" rx="6" fill="#F1F5F9"/>
+    <!-- Head Silhouette -->
+    <rect x="92" y="78" width="72" height="78" rx="36" fill="#F8FAFC"/>
+    <!-- Stylized Modern Hair (Bob Cut with Elegance) -->
+    <path d="M 86 102 C 86 64, 170 64, 170 102 C 170 120, 166 138, 160 152 L 154 152 C 158 136, 160 120, 160 102 C 160 76, 96 76, 96 102 C 96 120, 98 136, 102 152 L 96 152 C 90 138, 86 120, 86 102 Z" fill="#0F172A"/>
+    <!-- Glasses Framing (Intelligence & Authority) -->
+    <rect x="100" y="104" width="24" height="16" rx="4" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+    <rect x="132" y="104" width="24" height="16" rx="4" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+    <path d="M 124 112 L 132 112" stroke="#2563EB" stroke-width="2.5"/>
+  </g>
+
+  <!-- Verified Editor Badge -->
+  <g transform="translate(186, 204)" filter="url(#shadow-sm)">
+    <circle cx="16" cy="16" r="16" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M 11 16 L 14 19 L 21 12" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

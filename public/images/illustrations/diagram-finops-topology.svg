@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" role="img" aria-labelledby="title desc">
+  <title id="title">Cloud Cost Architecture &amp; FinOps Topology</title>
+  <desc id="desc">System architecture diagram mapping unit economics and capacity management directly across ingress gateways, edge caching, and compute auto-scaling clusters.</desc>
+  <defs>
+    <linearGradient id="bg-finops" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="node-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow-node" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-finops)"/>
+
+  <!-- Subtle Blueprint Grid -->
+  <g stroke="#334155" stroke-width="1" opacity="0.2">
+    <path d="M 0 90 L 800 90 M 0 180 L 800 180 M 0 270 L 800 270 M 0 360 L 800 360" />
+    <path d="M 160 0 L 160 450 M 320 0 L 320 450 M 480 0 L 480 450 M 640 0 L 640 450" />
+  </g>
+
+  <!-- Diagram Header -->
+  <text x="40" y="42" fill="#10B981" font-family="monospace" font-size="11" font-weight="700" tracking="3">FINOPS TOPOLOGY v1.4</text>
+  <text x="40" y="66" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800">Upstream Architectural Cost Control &amp; Unit Economics Loop</text>
+
+  <!-- Connecting Lines -->
+  <g fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 170 225 L 240 225" />
+    <path d="M 380 225 L 450 225" />
+    <path d="M 590 225 L 640 225" />
+    <!-- Loop Back Arrow below -->
+    <path d="M 520 285 C 520 360, 310 360, 310 285" stroke-dasharray="5 5" stroke="#38BDF8"/>
+  </g>
+  <g fill="#10B981">
+    <polygon points="236,220 246,225 236,230"/>
+    <polygon points="446,220 456,225 446,230"/>
+    <polygon points="636,220 646,225 636,230"/>
+  </g>
+  <polygon points="305,289 310,279 315,289" fill="#38BDF8"/>
+
+  <!-- Left Node: Edge Traffic & Ingress -->
+  <g transform="translate(40, 175)" filter="url(#shadow-node)">
+    <rect width="130" height="100" rx="12" fill="url(#node-grad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <circle cx="20" cy="24" r="5" fill="#38BDF8"/>
+    <text x="34" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Edge Ingress</text>
+    <text x="20" y="52" fill="#94A3B8" font-family="monospace" font-size="10">Global CDN / WAF</text>
+    <rect x="20" y="66" width="90" height="16" rx="3" fill="#38BDF8" fill-opacity="0.2"/>
+    <text x="28" y="78" fill="#38BDF8" font-family="monospace" font-size="9" font-weight="700">Cache Ratio: 88%</text>
+  </g>
+
+  <!-- Center Node: Stateless Compute Cluster -->
+  <g transform="translate(244, 160)" filter="url(#shadow-node)">
+    <rect width="140" height="130" rx="14" fill="url(#node-grad)" stroke="#10B981" stroke-width="2.5"/>
+    <circle cx="22" cy="26" r="6" fill="#10B981"/>
+    <text x="36" y="30" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">Spot Pool Cluster</text>
+    <rect x="22" y="48" width="96" height="20" rx="4" fill="#1E293B"/>
+    <text x="30" y="62" fill="#10B981" font-family="monospace" font-size="10" font-weight="700">Auto-Scale: On</text>
+    <rect x="22" y="74" width="96" height="20" rx="4" fill="#1E293B"/>
+    <text x="30" y="88" fill="#38BDF8" font-family="monospace" font-size="10">Idle Drop: &lt; 4%</text>
+    <rect x="22" y="100" width="96" height="16" rx="3" fill="#10B981" fill-opacity="0.2"/>
+    <text x="28" y="112" fill="#10B981" font-family="monospace" font-size="9" font-weight="700">COST PER REQ: $0.001</text>
+  </g>
+
+  <!-- Right Node: Multi-Tier Storage & Tiering -->
+  <g transform="translate(454, 175)" filter="url(#shadow-node)">
+    <rect width="140" height="100" rx="12" fill="url(#node-grad)" stroke="#F59E0B" stroke-width="1.5"/>
+    <circle cx="20" cy="24" r="5" fill="#F59E0B"/>
+    <text x="34" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Storage Tiering</text>
+    <text x="20" y="52" fill="#94A3B8" font-family="monospace" font-size="10">Hot DB / Cold S3</text>
+    <rect x="20" y="66" width="100" height="16" rx="3" fill="#F59E0B" fill-opacity="0.2"/>
+    <text x="28" y="78" fill="#F59E0B" font-family="monospace" font-size="9" font-weight="700">TTL Archival: 30d</text>
+  </g>
+
+  <!-- Far Right Dashboard Indicator -->
+  <g transform="translate(644, 185)" filter="url(#shadow-node)">
+    <rect width="116" height="80" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+    <text x="16" y="28" fill="#94A3B8" font-family="monospace" font-size="9" font-weight="700">UNIT ECONOMICS</text>
+    <text x="16" y="56" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="900">-42%</text>
+    <text x="68" y="54" fill="#64748B" font-family="monospace" font-size="9">/ User</text>
+  </g>
+
+  <!-- Footer Legend -->
+  <g transform="translate(40, 415)" font-family="monospace" font-size="11" fill="#64748B">
+    <circle cx="6" cy="-4" r="4" fill="#38BDF8"/>
+    <text x="16" y="0">Edge Offload</text>
+    <circle cx="140" cy="-4" r="4" fill="#10B981"/>
+    <text x="150" y="0">Spot Infrastructure</text>
+    <circle cx="310" cy="-4" r="4" fill="#F59E0B"/>
+    <text x="320" y="0">Lifecycle Policy</text>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise AI Cloud Leaderboard Banner Graphic</title>
+  <desc id="desc">Publication-grade leaderboard artwork illustrating zero-trust identity hardening across hybrid cloud AI agent pipelines.</desc>
+  <defs>
+    <linearGradient id="lb-bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="shield-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" fill="url(#lb-bg)"/>
+
+  <!-- High-Tech Grid & Node Network -->
+  <g stroke="#334155" stroke-width="1" opacity="0.3">
+    <path d="M 0 80 L 1200 80 M 0 160 L 1200 160 M 0 240 L 1200 240" />
+    <path d="M 200 0 L 200 320 M 400 0 L 400 320 M 600 0 L 600 320 M 800 0 L 800 320 M 1000 0 L 1000 320" />
+  </g>
+
+  <!-- Left/Center Graphic Elements: Zero-Trust Nodes & Identity Gateway -->
+  <g transform="translate(680, 50)">
+    <!-- Security Shield Icon & Outer Halo -->
+    <circle cx="110" cy="110" r="90" fill="#3B82F6" opacity="0.08"/>
+    <circle cx="110" cy="110" r="70" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="6 6" fill="none" opacity="0.6"/>
+    <path d="M 110 50 L 160 72 L 160 114 C 160 152, 138 182, 110 196 C 82 182, 60 152, 60 114 L 60 72 Z" fill="url(#shield-grad)" stroke="#FFFFFF" stroke-width="2" opacity="0.9"/>
+    <!-- Lock Icon in Shield -->
+    <rect x="96" y="110" width="28" height="22" rx="4" fill="#FFFFFF"/>
+    <path d="M 102 110 L 102 98 C 102 92, 118 92, 118 98 L 118 110" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Connected Satellite Nodes -->
+    <g transform="translate(-140, 20)">
+      <rect width="130" height="56" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+      <circle cx="16" cy="18" r="4" fill="#10B981"/>
+      <text x="28" y="22" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">RBAC Identity</text>
+      <text x="16" y="42" fill="#94A3B8" font-family="monospace" font-size="9">Verified Token</text>
+      <path d="M 130 28 L 200 56" stroke="#38BDF8" stroke-width="2" stroke-dasharray="3 3"/>
+    </g>
+
+    <g transform="translate(-140, 140)">
+      <rect width="130" height="56" rx="8" fill="#1E293B" stroke="#06B6D4" stroke-width="1.5"/>
+      <circle cx="16" cy="18" r="4" fill="#06B6D4"/>
+      <text x="28" y="22" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">Agent Enclave</text>
+      <text x="16" y="42" fill="#94A3B8" font-family="monospace" font-size="9">Isolated Runtime</text>
+      <path d="M 130 28 L 200 -20" stroke="#06B6D4" stroke-width="2" stroke-dasharray="3 3"/>
+    </g>
+
+    <!-- Right Side Metrics Card -->
+    <g transform="translate(260, 60)">
+      <rect width="160" height="100" rx="10" fill="#0F172A" stroke="#3B82F6" stroke-width="2"/>
+      <text x="18" y="28" fill="#38BDF8" font-family="monospace" font-size="10" font-weight="700">LATENCY SLA</text>
+      <text x="18" y="64" fill="#10B981" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="900">&lt; 2ms</text>
+      <text x="18" y="86" fill="#94A3B8" font-family="monospace" font-size="9">Zero-Trust Overhead</text>
+    </g>
+  </g>
+</svg>

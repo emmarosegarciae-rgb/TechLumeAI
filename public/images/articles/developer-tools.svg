@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-dev" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <filter id="shadow-dev">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg-dev)"/>
+
+  <!-- Background Decorative Code Glow -->
+  <circle cx="200" cy="240" r="160" fill="#8B5CF6" opacity="0.08" filter="blur(50px)"/>
+  <circle cx="600" cy="240" r="160" fill="#3B82F6" opacity="0.08" filter="blur(50px)"/>
+
+  <!-- Left: IDE Code Editor Window -->
+  <g transform="translate(40, 50)" filter="url(#shadow-dev)">
+    <rect width="430" height="380" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    
+    <!-- Title bar -->
+    <rect width="430" height="38" rx="12" fill="#1E293B"/>
+    <circle cx="22" cy="19" r="5" fill="#EF4444"/>
+    <circle cx="38" cy="19" r="5" fill="#F59E0B"/>
+    <circle cx="54" cy="19" r="5" fill="#10B981"/>
+    <text x="160" y="23" fill="#94A3B8" font-family="monospace" font-size="11 font-semibold">agent-gateway-router.ts — Active Editor</text>
+
+    <!-- Code lines -->
+    <text x="24" y="70" fill="#64748B" font-family="monospace" font-size="12">1</text>
+    <text x="50" y="70" fill="#C084FC" font-family="monospace" font-size="12 font-bold">import</text>
+    <text x="100" y="70" fill="#E2E8F0" font-family="monospace" font-size="12">{ createAgentGateway, ZeroTrustGuard } <tspan fill="#C084FC">from</tspan> <tspan fill="#34D399">'@techlume/ai-sdk'</tspan>;</text>
+
+    <text x="24" y="96" fill="#64748B" font-family="monospace" font-size="12">2</text>
+    <text x="50" y="96" fill="#64748B" font-family="monospace" font-size="12">// Configure latency-optimized routing across frontier models</text>
+
+    <text x="24" y="122" fill="#64748B" font-family="monospace" font-size="12">3</text>
+    <text x="50" y="122" fill="#60A5FA" font-family="monospace" font-size="12 font-bold">const</text>
+    <text x="92" y="122" fill="#E2E8F0" font-family="monospace" font-size="12">gateway = createAgentGateway({</text>
+
+    <text x="24" y="148" fill="#64748B" font-family="monospace" font-size="12">4</text>
+    <text x="68" y="148" fill="#F43F5E" font-family="monospace" font-size="12">models:</text>
+    <text x="126" y="148" fill="#E2E8F0" font-family="monospace" font-size="12">[<tspan fill="#34D399">'claude-3-7-sonnet'</tspan>, <tspan fill="#34D399">'gpt-5-reasoning'</tspan>],</text>
+
+    <!-- Highlighted Diff / Inline AI Suggestion Block -->
+    <rect x="18" y="166" width="394" height="66" rx="6" fill="#8B5CF6" fill-opacity="0.15" stroke="#8B5CF6" stroke-width="1"/>
+    <text x="24" y="186" fill="#64748B" font-family="monospace" font-size="12">5</text>
+    <text x="68" y="186" fill="#C084FC" font-family="monospace" font-size="12 font-bold">+ fallbackPolicy:</text>
+    <text x="194" y="186" fill="#38BDF8" font-family="monospace" font-size="12">'latency-first'</text>
+    <text x="24" y="212" fill="#64748B" font-family="monospace" font-size="12">6</text>
+    <text x="68" y="212" fill="#C084FC" font-family="monospace" font-size="12 font-bold">+ securityFirewall:</text>
+    <text x="206" y="212" fill="#E2E8F0" font-family="monospace" font-size="12">new ZeroTrustGuard({ pii: <tspan fill="#FBBF24">true</tspan> }),</text>
+
+    <text x="24" y="254" fill="#64748B" font-family="monospace" font-size="12">7</text>
+    <text x="50" y="254" fill="#E2E8F0" font-family="monospace" font-size="12">});</text>
+
+    <!-- Terminal Bottom Pane inside IDE -->
+    <rect x="18" y="280" width="394" height="84" rx="6" fill="#020617" stroke="#1E293B"/>
+    <text x="32" y="304" fill="#38BDF8" font-family="monospace" font-size="11 font-bold">TERMINAL &gt; npx techlume-test --guard-eval</text>
+    <text x="32" y="326" fill="#10B981" font-family="monospace" font-size="11 font-semibold">✓ Zero-Trust Identity check passed (12ms)</text>
+    <text x="32" y="346" fill="#10B981" font-family="monospace" font-size="11 font-semibold">✓ Gateway latency benchmark: 38ms P95</text>
+  </g>
+
+  <!-- Right: AI Code Review & Assistant Panel -->
+  <g transform="translate(490, 50)" filter="url(#shadow-dev)">
+    <rect width="270" height="380" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+    <rect width="270" height="38" rx="12" fill="#1E293B"/>
+    <text x="24" y="23" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Codex AI Assistant</text>
+    <circle cx="236" cy="19" r="4" fill="#10B981"/>
+
+    <!-- Suggestion Card -->
+    <rect x="18" y="58" width="234" height="136" rx="8" fill="#1E293B" stroke="#8B5CF6" stroke-width="1.5"/>
+    <text x="32" y="82" fill="#C084FC" font-family="monospace" font-size="11 font-bold">⚡ Architectural Recommendation</text>
+    <text x="32" y="106" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12 font-bold">Add PII Scrubbing Middleware</text>
+    <text x="32" y="126" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Your reasoning agent routes prompts across external APIs. Enabling PII protection prevents accidental credential leakage.</text>
+    <rect x="32" y="160" width="94" height="22" rx="4" fill="#8B5CF6"/>
+    <text x="79" y="175" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="11 font-bold">Apply Diff</text>
+
+    <!-- Metrics Card below -->
+    <rect x="18" y="210" width="234" height="154" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="32" y="234" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">PR Quality Scorecard</text>
+    
+    <text x="32" y="264" fill="#94A3B8" font-family="monospace" font-size="11">Security Score</text>
+    <text x="210" y="264" fill="#10B981" font-family="monospace" font-size="11 font-bold">99 / 100</text>
+    <rect x="32" y="272" width="206" height="6" rx="3" fill="#334155"/>
+    <rect x="32" y="272" width="200" height="6" rx="3" fill="#10B981"/>
+
+    <text x="32" y="306" fill="#94A3B8" font-family="monospace" font-size="11">Latency Impact</text>
+    <text x="210" y="306" fill="#38BDF8" font-family="monospace" font-size="11 font-bold">+1.2 ms</text>
+    <rect x="32" y="314" width="206" height="6" rx="3" fill="#334155"/>
+    <rect x="32" y="314" width="180" height="6" rx="3" fill="#38BDF8"/>
+
+    <text x="32" y="348" fill="#10B981" font-family="monospace" font-size="11 font-bold">Ready for Production Merge</text>
+  </g>
+</svg>

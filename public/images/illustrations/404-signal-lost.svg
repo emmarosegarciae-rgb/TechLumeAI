@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%" role="img" aria-labelledby="title desc">
+  <title id="title">404 Signal Out of Bounds</title>
+  <desc id="desc">Illustration depicting a disconnected technical signal network with out-of-range frequency waves and severed node connections.</desc>
+  <defs>
+    <linearGradient id="notfound-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <filter id="shadow-nf" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" rx="24" fill="url(#notfound-bg)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Radar Circles & Disconnected Grid -->
+  <circle cx="300" cy="200" r="160" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.3"/>
+  <circle cx="300" cy="200" r="100" stroke="#EF4444" stroke-width="1" stroke-dasharray="6 6" fill="none" opacity="0.3"/>
+
+  <!-- Severed Signal Waves -->
+  <path d="M 80 200 C 140 160, 180 240, 240 200" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 360 200 C 420 160, 460 240, 520 200" fill="none" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+
+  <!-- Disconnected Node 1 (Left) -->
+  <g transform="translate(160, 175)" filter="url(#shadow-nf)">
+    <circle cx="25" cy="25" r="25" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="25" cy="25" r="6" fill="#38BDF8"/>
+    <path d="M 50 25 L 85 25" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Central Disruption Icon (Broken Link / Lost Signal) -->
+  <g transform="translate(260, 160)" filter="url(#shadow-nf)">
+    <rect width="80" height="80" rx="20" fill="#1E293B" stroke="#EF4444" stroke-width="2.5"/>
+    <path d="M 28 28 L 52 52 M 52 28 L 28 52" stroke="#EF4444" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="40" cy="40" r="28" stroke="#EF4444" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+  </g>
+
+  <!-- Disconnected Node 2 (Right) -->
+  <g transform="translate(390, 175)" filter="url(#shadow-nf)">
+    <circle cx="25" cy="25" r="25" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+    <circle cx="25" cy="25" r="6" fill="#64748B"/>
+    <path d="M -35 25 L 0 25" stroke="#64748B" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Error Telemetry Text below -->
+  <g transform="translate(190, 310)" font-family="monospace" font-size="12" font-weight="700">
+    <rect x="0" y="0" width="220" height="32" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <circle cx="18" cy="16" r="4" fill="#EF4444"/>
+    <text x="32" y="20" fill="#F8FAFC">ERR_SIGNAL_LOST (404)</text>
+  </g>
+</svg>

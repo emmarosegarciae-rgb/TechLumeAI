@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%" role="img" aria-labelledby="title desc">
+  <title id="title">High-Signal Technical Briefing Delivery</title>
+  <desc id="desc">Illustration of morning briefing delivery across architecture pipelines, verification checks, and curated signal streams.</desc>
+  <defs>
+    <linearGradient id="nl-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="card-nl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow-nl" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#nl-bg)"/>
+
+  <!-- Background Decorative Radar Circles -->
+  <circle cx="300" cy="225" r="180" stroke="#334155" stroke-width="1" fill="none" opacity="0.3"/>
+  <circle cx="300" cy="225" r="110" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.4"/>
+  <circle cx="300" cy="225" r="40" fill="#2563EB" opacity="0.1"/>
+
+  <!-- Left Stream: Raw Intelligence Ingestion -->
+  <g transform="translate(40, 110)" filter="url(#shadow-nl)">
+    <rect width="130" height="84" rx="10" fill="url(#card-nl)" stroke="#38BDF8" stroke-width="1.5"/>
+    <circle cx="18" cy="22" r="5" fill="#38BDF8"/>
+    <text x="32" y="26" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Raw Sources</text>
+    <text x="18" y="46" fill="#94A3B8" font-family="monospace" font-size="9">ArXiv / GitHub / Cloud</text>
+    <rect x="18" y="58" width="76" height="10" rx="3" fill="#334155"/>
+    <rect x="18" y="58" width="54" height="10" rx="3" fill="#38BDF8"/>
+  </g>
+
+  <!-- Right Stream: Executive Verification Layer -->
+  <g transform="translate(40, 260)" filter="url(#shadow-nl)">
+    <rect width="130" height="84" rx="10" fill="url(#card-nl)" stroke="#06B6D4" stroke-width="1.5"/>
+    <circle cx="18" cy="22" r="5" fill="#06B6D4"/>
+    <text x="32" y="26" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Filter Engine</text>
+    <text x="18" y="46" fill="#94A3B8" font-family="monospace" font-size="9">No PR Puff Pieces</text>
+    <rect x="18" y="58" width="90" height="10" rx="3" fill="#06B6D4" fill-opacity="0.2"/>
+    <text x="24" y="66" fill="#06B6D4" font-family="monospace" font-size="8" font-weight="700">100% SIGNAL</text>
+  </g>
+
+  <!-- Center Main Briefing Delivery Card -->
+  <g transform="translate(230, 100)" filter="url(#shadow-nl)">
+    <rect width="330" height="250" rx="16" fill="url(#card-nl)" stroke="#3B82F6" stroke-width="2.5"/>
+    <!-- Card Header -->
+    <rect x="0" y="0" width="330" height="48" rx="16" fill="#1E293B"/>
+    <circle cx="24" cy="24" r="6" fill="#10B981"/>
+    <text x="40" y="28" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800">TECHLUMEAI BRIEFING</text>
+    <text x="238" y="28" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="700">EDITION #412</text>
+    <line x1="0" y1="48" x2="330" y2="48" stroke="#334155" stroke-width="1"/>
+
+    <!-- Briefing Content Blocks -->
+    <g transform="translate(24, 72)">
+      <rect width="282" height="46" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="20" fill="#38BDF8" font-family="monospace" font-size="9" font-weight="700">TOP ARCHITECTURE</text>
+      <text x="14" y="36" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Agentic Routing Gates &amp; Token Latency</text>
+    </g>
+    <g transform="translate(24, 130)">
+      <rect width="282" height="46" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="20" fill="#10B981" font-family="monospace" font-size="9" font-weight="700">FINOPS BREAKDOWN</text>
+      <text x="14" y="36" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Edge Caching Economics vs. Spot Clusters</text>
+    </g>
+    <g transform="translate(24, 188)">
+      <rect width="180" height="36" rx="6" fill="#2563EB" fill-opacity="0.2" stroke="#3B82F6" stroke-width="1"/>
+      <text x="14" y="22" fill="#60A5FA" font-family="monospace" font-size="10" font-weight="700">Verified Delivery · 06:00 UTC</text>
+    </g>
+  </g>
+
+  <!-- Connecting Stream Paths -->
+  <g fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="5 5">
+    <path d="M 170 152 C 200 152, 200 180, 230 180" />
+    <path d="M 170 302 C 200 302, 200 270, 230 270" />
+  </g>
+  <circle cx="200" cy="165" r="4" fill="#38BDF8"/>
+  <circle cx="200" cy="285" r="4" fill="#06B6D4"/>
+</svg>

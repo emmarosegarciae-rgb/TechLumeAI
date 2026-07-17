@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-finops" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="chart-finops" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="shadow-finops">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg-finops)"/>
+
+  <!-- Grid background -->
+  <g stroke="#312E81" stroke-width="1" opacity="0.4">
+    <path d="M 0 120 L 800 120 M 0 240 L 800 240 M 0 360 L 800 360" />
+    <path d="M 200 0 L 200 480 M 400 0 L 400 480 M 600 0 L 600 480" />
+  </g>
+
+  <!-- Main FinOps Dashboard Card -->
+  <g transform="translate(60, 50)" filter="url(#shadow-finops)">
+    <rect width="680" height="380" rx="14" fill="#0F172A" stroke="#4338CA" stroke-width="1.5"/>
+
+    <!-- Header bar -->
+    <text x="32" y="42" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">GPU Cluster FinOps & Allocation Matrix</text>
+    <text x="32" y="64" fill="#94A3B8" font-family="monospace" font-size="11">Real-Time H100 / A100 Cost Attribution across Multi-Cloud Regions</text>
+
+    <!-- Top KPI Cards -->
+    <!-- KPI 1 -->
+    <rect x="32" y="88" width="190" height="74" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="46" y="114" fill="#94A3B8" font-family="monospace" font-size="11">Monthly GPU Spend</text>
+    <text x="46" y="142" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">$142,850</text>
+    <text x="160" y="140" fill="#10B981" font-family="monospace" font-size="11 font-bold">-18.4%</text>
+
+    <!-- KPI 2 -->
+    <rect x="245" y="88" width="190" height="74" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="259" y="114" fill="#94A3B8" font-family="monospace" font-size="11">Cluster Utilization</text>
+    <text x="259" y="142" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">89.4%</text>
+    <text x="373" y="140" fill="#38BDF8" font-family="monospace" font-size="11 font-bold">Optimal</text>
+
+    <!-- KPI 3 -->
+    <rect x="458" y="88" width="190" height="74" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="472" y="114" fill="#94A3B8" font-family="monospace" font-size="11">Cost per 1M Tokens</text>
+    <text x="472" y="142" fill="#F59E0B" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="800">$0.14</text>
+    <text x="586" y="140" fill="#10B981" font-family="monospace" font-size="11 font-bold">-$0.06</text>
+
+    <!-- Main Chart Section -->
+    <rect x="32" y="180" width="403" height="170" rx="8" fill="#0B0F19" stroke="#1E293B"/>
+    <text x="46" y="204" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12 font-bold">Daily Inference Spend vs Pre-Reserved Capacity</text>
+    
+    <!-- Area Curve -->
+    <path d="M 46 320 Q 140 230, 240 250 T 420 200 L 420 330 L 46 330 Z" fill="url(#chart-finops)"/>
+    <path d="M 46 320 Q 140 230, 240 250 T 420 200" fill="none" stroke="#F59E0B" stroke-width="2.5"/>
+    <!-- Target Line -->
+    <path d="M 46 230 L 420 230" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="326" y="224" fill="#10B981" font-family="monospace" font-size="10 font-bold">Reserved Ceiling</text>
+
+    <!-- Right Cluster Status Table -->
+    <rect x="458" y="180" width="190" height="170" rx="8" fill="#1E293B" stroke="#334155"/>
+    <text x="472" y="204" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12 font-bold">Active Cluster Node Pools</text>
+
+    <!-- Row 1 -->
+    <text x="472" y="234" fill="#CBD5E1" font-family="monospace" font-size="11 font-semibold">us-east-1 (H100 x64)</text>
+    <rect x="472" y="242" width="162" height="6" rx="3" fill="#334155"/>
+    <rect x="472" y="242" width="144" height="6" rx="3" fill="#10B981"/>
+
+    <!-- Row 2 -->
+    <text x="472" y="274" fill="#CBD5E1" font-family="monospace" font-size="11 font-semibold">eu-west-1 (A100 x32)</text>
+    <rect x="472" y="282" width="162" height="6" rx="3" fill="#334155"/>
+    <rect x="472" y="282" width="120" height="6" rx="3" fill="#38BDF8"/>
+
+    <!-- Row 3 -->
+    <text x="472" y="314" fill="#CBD5E1" font-family="monospace" font-size="11 font-semibold">local-vpc (L4 x16)</text>
+    <rect x="472" y="322" width="162" height="6" rx="3" fill="#334155"/>
+    <rect x="472" y="322" width="60" height="6" rx="3" fill="#F59E0B"/>
+  </g>
+</svg>
