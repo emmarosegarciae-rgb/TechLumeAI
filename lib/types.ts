@@ -191,6 +191,40 @@ export type ArticleBlock =
   | { type: "mental-model"; title: string; modelType: "Problem-Solution Architecture" | "First-Principles Breakdown" | "Analogy Engineering" | "Multiple Perspectives Matrix" | "Principle-Based Teaching"; analogyOrPrinciple: string; breakdown: { label: string; description: string }[]; perspectives?: { role: string; takeaway: string }[] }
   | { type: "editorial-governance-panel"; contentClass: string; primaryPillar: string; topicCluster: string; targetAudience: string; opportunityScore: "Critical" | "High" | "Medium" | "Low"; editorialScore: number; decayStatus: "Fresh" | "Monitoring Due" | "Needs Update"; futureExpansion: string[] };
 
+export type ArticleContentSection = {
+  id: string;
+  heading: string;
+  level: number;
+  content: string;
+  entityMentions?: string[];
+};
+
+export type ArticleEntityOverviewBox = {
+  entityName: string;
+  entityType: string;
+  definition: string;
+  corePurpose: string;
+  architectureAndMechanics: string;
+  primaryLinks?: Array<{
+    anchorText: string;
+    targetSlug: string;
+    relationshipType: string;
+    targetType: string;
+  }>;
+  targetAudience?: string;
+  keyTakeaways?: string[];
+};
+
+export type ArticleFaqSection = {
+  id: string;
+  heading: string;
+  faqs: Array<{
+    question: string;
+    answer: string;
+    intent?: string;
+  }>;
+};
+
 export type Article = {
   slug: string;
   title: string;
@@ -290,6 +324,9 @@ export type Article = {
   productionMetadata?: ArticleProductionMetadata;
   qaGovernanceMetadata?: ArticleQAGovernanceMetadata;
   lifecycleGovernanceMetadata?: ArticleLifecycleGovernanceMetadata;
+  contentSections?: ArticleContentSection[];
+  entityOverviewBox?: ArticleEntityOverviewBox;
+  faqSections?: ArticleFaqSection[];
   content: ArticleBlock[];
 };
 
