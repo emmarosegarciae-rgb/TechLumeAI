@@ -6,7 +6,7 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     dangerouslyAllowSVG: true,
-    contentDispositionType: "attachment"
+    contentDispositionType: "inline"
   },
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"]
