@@ -137,7 +137,7 @@ export const categories: Category[] = [
     name: "AI Hardware",
     description: "Silicon architectures, NVIDIA/AMD cluster scaling, quantization economics, and edge inference.",
     color: "#3B82F6",
-    image: "/images/categories/data-science.svg",
+    image: "/images/categories/ai-hardware.png",
     featuredGuideSlug: "open-models-infrastructure-shift",
     topicClusters: [
       "quantization-int4-fp8",
@@ -156,7 +156,7 @@ export const categories: Category[] = [
     name: "Future Technology",
     description: "Robotics foundation models, physical AI, quantum horizon systems, and autonomous robotics.",
     color: "#6366F1",
-    image: "/images/categories/machine-learning.svg",
+    image: "/images/categories/future-tech.png",
     featuredGuideSlug: "open-models-infrastructure-shift",
     topicClusters: [
       "physical-ai-robotics",
