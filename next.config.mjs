@@ -45,7 +45,7 @@ const nextConfig = {
       },
       {
         source: "/(.*)",
-        has: [{ type: "host", value: "tech-lume-ai.vercel.app" }],
+        has: [{ type: "host", value: "tech-lume-ai-xi.vercel.app" }],
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
       }
     ];
