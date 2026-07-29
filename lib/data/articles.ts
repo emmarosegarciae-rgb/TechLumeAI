@@ -7368,7 +7368,7 @@ def proprietary_rag_pipeline(query: str, customer_id: str) -> dict:
     dek: "Generalizable robotics remains hard, but multimodal models are improving training efficiency and deployment flexibility.",
     category: "future-tech",
     author: "ethan-cho",
-    image: "/images/articles/robotics-models.svg",
+    image: "/images/articles/robotics_foundation_hero.png",
     imageAlt: "Warehouse robotics system with multimodal perception overlays",
     publishedAt: "2026-07-03T15:00:00.000Z",
     updatedAt: "2026-07-04T10:20:00.000Z",
