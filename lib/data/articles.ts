@@ -9712,7 +9712,7 @@ Evaluate the model answer against the reference."""
     dek: "The simplest latency optimization most inference stacks still aren't using — with production benchmarks, VRAM budget models, and an honest guide to when it hurts rather than helps.",
     category: "ai-hardware",
     author: "ethan-cho",
-    image: "/images/articles/open-models.svg",
+    image: "/images/articles/speculative_decoding_hero.png",
     imageAlt: "Speculative decoding draft-target token acceptance flow diagram on a dark engineering dashboard",
     publishedAt: "2026-07-22T08:00:00.000Z",
     updatedAt: "2026-07-22T08:00:00.000Z",
