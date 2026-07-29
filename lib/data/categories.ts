@@ -99,7 +99,7 @@ export const categories: Category[] = [
     name: "AI Business",
     description: "Enterprise Centers of Excellence, AI skills gap analysis, salary benchmarks, and operator playbooks.",
     color: "#F59E0B",
-    image: "/images/categories/business.svg",
+    image: "/images/categories/business.png",
     featuredGuideSlug: "enterprise-ai-agents-production",
     topicClusters: [
       "ai-center-of-excellence",
